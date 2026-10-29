@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking Form</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+        }
+
+        .booking-form {
+            width: 600px;
+            margin: 250px auto 0;
+            border: 2px solid black;
+            border-top: 8px solid black;
+            padding: 15px 20px 45px;
+            box-sizing: content-box;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 15px 0 25px;
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 225px;
+            box-sizing: border-box;
+        }
+
+        input[type="date"] {
+            width: 160px;
+        }
+
+        input[type="number"] {
+            width: 85px;
+        }
+
+        select {
+            width: 155px;
+        }
+
+        textarea {
+            width: 450px;
+            height: 90px;
+            display: block;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-family: inherit;
+            font-size: 18px;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="booking-form">
+        <h1>Hotel Room Booking Form</h1>
+
+        <div class="form-row">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-row">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div class="form-row">
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+        </div>
+
+        <div class="form-row">
+            <label for="room">Room Type:</label>
+            <select id="room" name="room">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+        </div>
+
+        <div class="form-row">
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests"></textarea>
+        </div>
+
+        <button type="submit">Book Now</button>
+        <button type="reset">Reset Form</button>
+    </form>
+
+</body>
+</html>
